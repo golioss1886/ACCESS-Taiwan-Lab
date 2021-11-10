@@ -3,11 +3,12 @@ using namespace std;
 int main() {
 	int a;
 	string str,tmp;
-	int n = 0;//arraySizeCount
-	map<int, int> m;
 	while(getline(cin,str)) {
 		//cout << " :: " << str << endl;
+		int n = 0;//arraySizeCount
+		map<int, int> m;
 		stringstream ss(str);
+		//cout <<"str :: "<< str << endl;
 		while(ss >> tmp) {
 			//cout << tmp << endl;
 			a = stoi(tmp);
@@ -26,6 +27,8 @@ int main() {
 			if(it -> second > floor(n/2))
 				cout << it -> first << " ";
 		}
+		cout <<"\n";
+		//cin.ignore();
 	}
 	return 0;
 }
